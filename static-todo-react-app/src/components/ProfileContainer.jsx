@@ -6,12 +6,9 @@ function ProfileContainer () {
 
     return (
         <div>
-            
+            <p>{String(profiles[0]["name"])}</p>
             <ul>
-                <ProfileCard key = "123" name = "Patricia Heaton" age = "54" bio = "blah blah" />
-                <ProfileCard key = "124" name = "Ray Romano" age = "64" bio = "blah blah" />
-                <ProfileCard key = "125" name = "Peter Boyle" age = "112" bio = "blah blah" />
-
+                {profiles.map(pro => <ProfileCard key = {pro.id} name = {pro.name} age = {pro.age} bio = {pro.bio}/>)}
             </ul>
         </div>
     )
